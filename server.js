@@ -7,11 +7,7 @@ const url = require('url');
 var httpServer = require('http');
 
 const ioServer = require('socket.io');
-<<<<<<< HEAD
-const RTCMultiConnectionServer = require('./node_scripts/index.js');
-=======
 const RTCMultiConnectionServer = require('rtcmulticonnection-server');
->>>>>>> 80cfe12 (initial commit)
 
 var PORT = 9001;
 var isUseHTTPs = false;
@@ -24,10 +20,7 @@ const jsonPath = {
 const BASH_COLORS_HELPER = RTCMultiConnectionServer.BASH_COLORS_HELPER;
 const getValuesFromConfigJson = RTCMultiConnectionServer.getValuesFromConfigJson;
 const getBashParameters = RTCMultiConnectionServer.getBashParameters;
-<<<<<<< HEAD
-=======
 const resolveURL = RTCMultiConnectionServer.resolveURL;
->>>>>>> 80cfe12 (initial commit)
 
 var config = getValuesFromConfigJson(jsonPath);
 config = getBashParameters(config, BASH_COLORS_HELPER);
@@ -41,10 +34,7 @@ if(isUseHTTPs === false) {
     isUseHTTPs = config.isUseHTTPs;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 80cfe12 (initial commit)
 function serverHandler(request, response) {
     // to make sure we always get valid info from json file
     // even if external codes are overriding it
@@ -112,12 +102,6 @@ httpApp = httpApp.listen(process.env.PORT || PORT, process.env.IP || "0.0.0.0", 
 
 // --------------------------
 // socket.io codes goes below
-<<<<<<< HEAD
-
-ioServer(httpApp).on('connection', function(socket) {
-    RTCMultiConnectionServer.addSocket(socket, config);
-
-=======
 var iooptions = {
 allowUpgrades: true,
 transports: [ 'polling', 'websocket' ],
@@ -133,7 +117,6 @@ allowEIO3: true
 
 ioServer(httpApp,iooptions).on('connection', function(socket) {
 RTCMultiConnectionServer.addSocket(socket, config);
->>>>>>> 80cfe12 (initial commit)
     // ----------------------
     // below code is optional
 

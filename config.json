@@ -1,11 +1,7 @@
 {
   "socketURL": "/",
   "dirPath": "",
-<<<<<<< HEAD
-  "homePage": "/demos/index.html",
-=======
   "homePage": "",
->>>>>>> 80cfe12 (initial commit)
   "socketMessageEvent": "RTCMultiConnection-Message",
   "socketCustomEvent": "RTCMultiConnection-Custom-Message",
   "port": "9001",
@@ -15,13 +11,7 @@
   "sslKey": "./fake-keys/privatekey.pem",
   "sslCert": "./fake-keys/certificate.pem",
   "sslCabundle": "",
-<<<<<<< HEAD
-  "enableAdmin": "false",
-  "adminUserName": "username",
-  "adminPassword": "password"
-=======
   "enableAdmin": "true",
   "adminUserName": "",
   "adminPassword": ""
->>>>>>> 80cfe12 (initial commit)
 }
